@@ -1,11 +1,11 @@
-# babel-plugin-wildcard
+# babel-plugin-wildcard-hayneedle
 
 Allows you to `import` all files from a directory at compile-time.
 
 ## Installation
 
 ```sh
-$ npm install babel-plugin-wildcard
+$ npm install babel-plugin-wildcard-hayneedle
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ $ npm install babel-plugin-wildcard
 
 ```json
 {
-  "plugins": ["wildcard"]
+  "plugins": ["wildcard-hayneedle"]
 }
 ```
 
@@ -30,7 +30,7 @@ $ babel --plugins include script.js
 
 ```javascript
 require('babel').transform('code', {
-  plugins: ['wildcard']
+  plugins: ['wildcard-hayneedle']
 });
 ```
 
@@ -126,12 +126,12 @@ Files are automatically camel-cased and in the `import` statements the extension
 
 ## Options
 
-`babel-plugin-wildcard` allows you to change various settings by providing an options object by using the following instead:
+`babel-plugin-wildcard-hayneedle` allows you to change various settings by providing an options object by using the following instead:
 
 ```javascript
 {
     plugins: [
-        ['wildcard', { options }]
+        ['wildcard-hayneedle', { options }]
     ]
 }
 ```
@@ -144,7 +144,7 @@ By default, the files with the following extensions: `["js", "es6", "es", "jsx"]
 ```javascript
 {
     plugins: [
-        ['wildcard', {
+        ['wildcard-hayneedle', {
             'exts': ["js", "es6", "es", "jsx", "javascript"]
         }]
     ]
@@ -157,7 +157,7 @@ By default, the file extension will be removed in the generated `import` stateme
 ```javascript
 {
     plugins: [
-        ['include', {
+        ['wildcard-hayneedle', {
             'nostrip': true
         }]
     ]
@@ -178,7 +178,7 @@ you can disable this behavior using:
 ```javascript
 {
     plugins: [
-        ['include', {
+        ['wildcard-hayneedle', {
             'noCamelCase': true
         }]
     ]
